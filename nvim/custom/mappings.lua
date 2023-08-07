@@ -70,8 +70,8 @@ M.split_windows = {
 
 M.navigate_buffer = {
   n = {
-    ["gb"] = {":bp<CR>", "Go to the previous buffer"},
-    ["gn"] = {":bn<CR>", "Go to the next buffer"},
+    ["gb"] = {"<C-O>", "Go to the previous location"},
+    ["gn"] = {"<C-I>", "Go to the next location"},
 
     ["<leader>cb"] = {":bd!<CR>", "close current file without exiting vim and ‘no modification’"},
   }
