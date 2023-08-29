@@ -84,6 +84,7 @@ return require('packer').startup(function(use)
         'nvim-telescope/telescope.nvim', tag = '0.1.2',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
+    use 'molecule-man/telescope-menufacture'
 
     use 'mfussenegger/nvim-dap'
     use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
@@ -123,17 +124,7 @@ return require('packer').startup(function(use)
         end
     }
 
-    use {
-        "folke/flash.nvim",
-        config = function ()
-            require('flash').setup()
-            vim.keymap.set({"n", "x", "o"}, "s", function() require("flash").jump() end, {desc = "Flash"})
-            vim.keymap.set({"n", "o", "x"}, "S", function() require("flash").treesitter() end, {desc = "Flash Treesitter"})
-            vim.keymap.set("o", "r", function() require("flash").remote() end, {desc = "Remote Flash"})
-            vim.keymap.set({"o", "x"}, "R", function() require("flash").treesitter_search() end, {desc = "Treesitter Search"})
-            vim.keymap.set("c", "<c-s>", function() require("flash").toggle() end, {desc = "Toggle Flash Search"})
-        end
-    }
+    use "folke/flash.nvim"
 
     use {"ellisonleao/glow.nvim", config = function() require("glow").setup() end}
 

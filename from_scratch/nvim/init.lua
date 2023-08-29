@@ -16,5 +16,5 @@ require("plugins.bufferline")
 require("plugins.gitsigns")
 require("plugins.telescope")
 require("plugins.dap")
-
+require("plugins.flash")
 

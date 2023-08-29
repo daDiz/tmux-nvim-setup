@@ -1,5 +1,6 @@
 vim.opt.exrc = true
 vim.opt.hlsearch = false
+vim.opt.autochdir = true
 
 -- row number
 vim.opt.relativenumber = true
