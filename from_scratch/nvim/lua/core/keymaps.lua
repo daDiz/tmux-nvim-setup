@@ -33,3 +33,16 @@ keymap.set("n", "<s-Down>", ":resize +1<CR>", { noremap = true, silent = true })
 -- yank
 keymap.set({"v", "n"}, "<leader>y", "\"+y")
 
+-- copy file path
+keymap.set("n", "<leader>ya", "<cmd>let @+ = expand(\"%:p\")<cr>", { noremap= true, desc = "copy absolute file path" })
+-- copy file name
+keymap.set("n", "<leader>yf", "<cmd>let @+ = expand(\"%:t\")<cr>", { noremap = true, desc = "copy file name" })
+
+
+-- quickfix
+keymap.set("n", "<leader>cn", "<cmd>cnext<cr>", {desc = "quickfix next"})
+keymap.set("n", "<leader>cp", "<cmd>cprev<cr>", {desc = "quickfix previous"})
+
+
+
+

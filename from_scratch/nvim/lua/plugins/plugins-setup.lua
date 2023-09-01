@@ -85,6 +85,7 @@ return require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
     use 'molecule-man/telescope-menufacture'
+    use "smartpde/telescope-recent-files"
 
     use 'mfussenegger/nvim-dap'
     use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
@@ -239,6 +240,13 @@ return require('packer').startup(function(use)
             vim.keymap.set("n", "<leader>ta", function () require("neotest").run.attach() end, {desc = "Attach to the nearest test"})
             vim.keymap.set("n", "<leader>to", function() require("neotest").output_panel.toggle() end, {desc = "Toggle output panel"})
         end
+    }
+
+    use {'kevinhwang91/nvim-bqf', ft = 'qf'}
+
+    use {'junegunn/fzf', run = function()
+        vim.fn['fzf#install']()
+    end
     }
 
     if packer_bootstrap then
