@@ -15,7 +15,7 @@ require("telescope").load_extension("recent_files")
 local builtin = require('telescope.builtin')
 -- vim.keymap.set('n', '<leader>ff', builtin.find_files, {desc = "find files"})
 -- vim.keymap.set('n', '<leader>fw', builtin.live_grep, {desc = "live grep"})
-vim.keymap.set('n', '<leader>fb', builtin.buffers, {desc = "find in current buffer"})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {desc = "find buffer"})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {desc = "find help"})
 
 vim.keymap.set('n', '<leader>ff', require('telescope').extensions.menufacture.find_files, {desc = "find files"})

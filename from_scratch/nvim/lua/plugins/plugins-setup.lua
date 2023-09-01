@@ -249,6 +249,15 @@ return require('packer').startup(function(use)
     end
     }
 
+    use {
+        'j-morano/buffer_manager.nvim',
+        requires = { 'nvim-lua/plenary.nvim' },
+        config = function ()
+            require("buffer_manager").setup()
+            vim.keymap.set("n", "<leader>mm", function() require("buffer_manager.ui").toggle_quick_menu() end, {desc = "toggle buffer manager"})
+        end
+    }
+
     if packer_bootstrap then
         require('packer').sync()
     end
