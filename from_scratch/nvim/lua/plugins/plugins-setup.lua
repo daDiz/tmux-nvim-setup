@@ -78,7 +78,6 @@ return require('packer').startup(function(use)
     use 'windwp/nvim-autopairs'
 
     use 'akinsho/bufferline.nvim'
-    use 'lewis6991/gitsigns.nvim'
 
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.2',
@@ -257,6 +256,11 @@ return require('packer').startup(function(use)
             vim.keymap.set("n", "<leader>mm", function() require("buffer_manager.ui").toggle_quick_menu() end, {desc = "toggle buffer manager"})
         end
     }
+
+    -- git related
+    use 'tpope/vim-fugitive'
+    use 'lewis6991/gitsigns.nvim'
+
 
     if packer_bootstrap then
         require('packer').sync()

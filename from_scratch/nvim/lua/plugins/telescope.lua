@@ -23,6 +23,8 @@ vim.keymap.set('n', '<leader>fw', require('telescope').extensions.menufacture.li
 vim.keymap.set('n', '<leader>fs', require('telescope').extensions.menufacture.grep_string, {desc = "find string"})
 vim.keymap.set('n', '<leader>fg', require('telescope').extensions.menufacture.git_files, {desc = "find git"})
 
+vim.keymap.set('n', '<leader>sb', '<cmd>:Telescope git_branches<cr>', {desc = "show git branch"})
+
 
 -- search selected text by telescope
 function vim.getVisualSelection()
