@@ -238,6 +238,8 @@ return require('packer').startup(function(use)
             vim.keymap.set("n", "<leader>ts", function() require("neotest").run.stop() end, {desc = "Stop the nearest test"})
             vim.keymap.set("n", "<leader>ta", function () require("neotest").run.attach() end, {desc = "Attach to the nearest test"})
             vim.keymap.set("n", "<leader>to", function() require("neotest").output_panel.toggle() end, {desc = "Toggle output panel"})
+            vim.keymap.set("n", "<leader>tm", function() require("neotest").summary.toggle() end, {desc = "Toggle summary window"})
+            vim.keymap.set("n", "<leader>tp", function () require("neotest").output.open() end, {desc = "Show output"})
         end
     }
 
@@ -260,7 +262,6 @@ return require('packer').startup(function(use)
     -- git related
     use 'tpope/vim-fugitive'
     use 'lewis6991/gitsigns.nvim'
-
 
     if packer_bootstrap then
         require('packer').sync()
